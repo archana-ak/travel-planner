@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AdBanner from "@/components/AdBanner";
 
 export default function Home() {
   return (
@@ -22,6 +23,11 @@ export default function Home() {
           </Link>
         </div>
       </section>
+
+      {/* Ad between hero and features */}
+      <div className="max-w-7xl mx-auto px-4 w-full">
+        <AdBanner slot="YOUR_AD_SLOT_1" format="horizontal" />
+      </div>
 
       {/* Features */}
       <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

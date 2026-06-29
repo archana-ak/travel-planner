@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import AdBanner from "@/components/AdBanner";
 
 interface Trip {
   id: string;
@@ -79,6 +80,8 @@ export default function DashboardPage() {
           + Plan New Trip
         </Link>
       </div>
+
+      <AdBanner slot="YOUR_AD_SLOT_2" format="horizontal" />
 
       {trips.length === 0 ? (
         <div className="bg-white rounded-2xl border border-gray-100 p-12 text-center">

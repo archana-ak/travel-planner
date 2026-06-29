@@ -5,6 +5,7 @@ import { useParams } from "next/navigation";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { GeneratedItinerary } from "@/types";
+import AdBanner from "@/components/AdBanner";
 
 interface TripData {
   id: string;
@@ -114,6 +115,8 @@ export default function TripDetailPage() {
           <span>{trip.startPoint} → {trip.endPoint}</span>
         </div>
       </div>
+
+      <AdBanner slot="YOUR_AD_SLOT_3" format="horizontal" />
 
       {/* Tabs */}
       <div className="flex flex-wrap gap-2 mb-6">
